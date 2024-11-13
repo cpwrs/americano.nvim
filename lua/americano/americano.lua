@@ -136,15 +136,6 @@ local function set_groups()
     DiagnosticUnderlineInfo = { underline = true, sp = colors.blue },
     DiagnosticUnderlineHint = { underline = true, sp = colors.green },
 
-    -- For my custom status line
-    StatusError = { fg = colors.red, bg = colors.dark },
-    StatusWarn  = { fg = colors.orange, bg = colors.dark },
-    StatusInfo  = { fg = colors.blue, bg = colors.dark },
-    StatusHint  = { fg = colors.green, bg = colors.dark },
-    StatusLine      = { fg = colors.white, bg = colors.dark },
-    StatusOther     = { fg = colors.grey2, bg = colors.dark },
-    StatusImportant = { fg = colors.bright, bg = colors.dark, bold = true },
-
     -- Telescope
     TelescopeTitle  = { fg = colors.green, bg = colors.grey5, bold = true },
     TelescopeBorder = { fg = colors.grey5, bg = colors.grey5 },
