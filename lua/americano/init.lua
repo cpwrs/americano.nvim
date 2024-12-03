@@ -41,6 +41,7 @@ local function set_groups()
 
     Directory       = { fg = colors.bright },
     ErrorMsg        = { fg = colors.red },
+    WarningMsg      = { fg = colors.orange },
     WinSeparator    = { fg = colors.grey3, bg = colors.black },
     VertSplit       = { link = "WinSeperator" },
     Folded          = { fg = colors.grey1 },
@@ -52,9 +53,12 @@ local function set_groups()
     MoreMsg         = { fg = colors.orange },
     NonText         = { fg = colors.grey6 },
     Pmenu           = { fg = colors.white, bg = colors.grey5 },
-    PmenuSel        = { fg = colors.bright, bg = colors.grey3 },
-    PmenuSbar       = { fg = colors.grey3, bg = colors.grey5 },
+    PmenuSel        = { fg = colors.bright, bg = colors.grey3, bold = true },
+    PmenuKind       = { fg = colors.grey1, bg = colors.grey5, italic = true },
+    PmenuKindSel    = { fg = colors.orange, bg = colors.grey3, italic = true },
+    PmenuSbar       = { fg = colors.tea, bg = colors.grey4 },
     PmenuThumb      = { bg = colors.cream },
+    QuickFixList    = { fg = colors.turq },
     Question        = { fg = colors.tea },
     IncSearch       = { fg = colors.bright, bg = colors.grey1 },
     CurSearch       = { fg = colors.bright, bg = colors.grey1 },
@@ -69,6 +73,7 @@ local function set_groups()
     TabLineSel      = { fg = colors.bright, bg = colors.black },
     TabLineFill     = { fg = colors.grey1, bg = colors.grey6 },
     Visual          = { bg = colors.grey5 },
+    Conceal         = { fg = colors.offwhite }, 
     MsgArea         = { link = "Normal" },
 
     -- Syntax
@@ -110,6 +115,7 @@ local function set_groups()
     DiffAdd         = { bg = colors.green, fg = colors.black },
     DiffChange      = { bg = colors.blue, fg = colors.black },
     DiffDelete      = { bg = colors.red, fg = colors.black },
+    DiffText        = { bg = colors.grey2, fg = colors.white },
 
     -- Diagnostics
     DiagnosticError = { fg = colors.red, bg = "none" },
