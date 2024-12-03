@@ -135,9 +135,9 @@ local function set_groups()
     Added           = { fg = colors.green },
     Removed         = { fg = colors.red },
     Changed         = { fg = colors.blue },
-    DiffAdd         = { bg = colors.green, fg = colors.white },
-    DiffChange      = { bg = colors.blue, fg = colors.white },
-    DiffDelete      = { bg = colors.red, fg = colors.white },
+    DiffAdd         = { bg = colors.green, fg = colors.black },
+    DiffChange      = { bg = colors.blue, fg = colors.black },
+    DiffDelete      = { bg = colors.red, fg = colors.black },
 
     -- Diagnostics
     DiagnosticError = { fg = colors.red, bg = "none" },
@@ -152,7 +152,7 @@ local function set_groups()
 
     -- Telescope
     TelescopeTitle  = { fg = colors.green, bg = colors.grey5, bold = true },
-    TelescopeBorder = { fg = colors.grey5, bg = colors.grey5 },
+    TelescopeBorder = { fg = colors.grey1, bg = colors.grey5 },
     TelescopeNormal = { fg = colors.white, bg = colors.grey5 },
   }
 
