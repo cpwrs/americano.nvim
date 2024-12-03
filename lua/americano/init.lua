@@ -138,7 +138,7 @@ end
 -- Apply user settings
 ---@param values table
 function americano.setup(values)
-  setmetatable(config, { __index = vim.tbl_extend('force', config.defautls, values) })
+  setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) })
 end
 
 -- Set the colorscheme
