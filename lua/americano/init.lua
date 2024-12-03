@@ -58,7 +58,7 @@ local function set_groups()
     PmenuKindSel    = { fg = colors.orange, bg = colors.grey3, italic = true },
     PmenuSbar       = { fg = colors.tea, bg = colors.grey4 },
     PmenuThumb      = { bg = colors.cream },
-    QuickFixList    = { fg = colors.turq },
+    QuickFixLine    = { fg = colors.turq },
     Question        = { fg = colors.tea },
     IncSearch       = { fg = colors.bright, bg = colors.grey1 },
     CurSearch       = { fg = colors.bright, bg = colors.grey1 },
