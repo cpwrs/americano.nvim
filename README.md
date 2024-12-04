@@ -25,5 +25,5 @@ require('americano').setup({
 
 ## Contributing
 
-Americano is minimal and unlikely to add many colors, but I want to support more plugins and groups! 
+Americano is minimal and unlikely to add many colors, but I want to support more plugins, highlight groups, and configurations! 
 Open a PR and include a screenshot showing the change for review. 
