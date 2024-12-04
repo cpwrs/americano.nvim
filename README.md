@@ -1,6 +1,6 @@
 # americano.nvim :coffee:
 
-Dark colorscheme for neovim. A smooth blend of neon nostalgia with a spalsh of warmth.
+Dark colorscheme for neovim. A smooth blend of neon nostalgia with a splash of warmth.
 
 ![image](https://github.com/user-attachments/assets/c939f718-e683-4872-81a8-ebb2ee7f1042)
 
