@@ -1,6 +1,8 @@
-# americano.nvim
+# americano.nvim :coffee:
 
 Dark colorscheme for neovim. A smooth blend of neon nostalgia with a spalsh of warmth.
+
+![image](https://github.com/user-attachments/assets/c939f718-e683-4872-81a8-ebb2ee7f1042)
 
 ## Usage
 
@@ -23,5 +25,5 @@ require('americano').setup({
 
 ## Contributing
 
-Americano is minimal and unlikely to add many colors, but I wants to support more plugins and groups! 
+Americano is minimal and unlikely to add many colors, but I want to support more plugins and groups! 
 Open a PR and include a screenshot showing the change for review. 
