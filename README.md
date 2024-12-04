@@ -4,7 +4,7 @@ Dark colorscheme for neovim. A smooth blend of neon nostalgia with a spalsh of w
 
 ## Usage
 
-Download americano with any neovim package manager.
+Download americano with any package manager on neovim latest.
 Add `colorscheme americano` (vimscript) or `require('americano').colorscheme()` (lua) to apply the colorscheme.
 
 ## Configuration
