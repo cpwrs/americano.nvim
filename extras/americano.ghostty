@@ -1,0 +1,25 @@
+# Americano colors for Ghostty
+## name: americano
+
+background = #1c1714
+foreground = #f7f7f7
+selection-foreground = #1c1714
+selection-background = #f7f7f7
+cursor-color = #d3ffdb
+
+palette = 0=#1c1714
+palette = 1=#ff909d
+palette = 2=#d3ffdb
+palette = 3=#fdffd1
+palette = 4=#aec1ff
+palette = 5=#d19cff
+palette = 6=#c9fafa
+palette = 7=#f7f7f7
+palette = 8=#12100e
+palette = 9=#ff5766
+palette = 10=#89ffcb
+palette = 11=#ffb699
+palette = 12=#aec1ff
+palette = 13=#ffb1f5
+palette = 14=#c9fafa
+palette = 15=#ffffff
