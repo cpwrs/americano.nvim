@@ -51,7 +51,7 @@ local function set_groups()
     MatchParen      = { fg = colors.bright, bg = colors.grey1 },
     ModeMsg         = { fg = colors.pink },
     MoreMsg         = { fg = colors.orange },
-    NonText         = { fg = colors.grey6 },
+    NonText         = { fg = colors.grey1 },
     Pmenu           = { fg = colors.white, bg = colors.grey5 },
     PmenuSel        = { fg = colors.bright, bg = colors.grey3, bold = true },
     PmenuKind       = { fg = colors.grey1, bg = colors.grey5, italic = true },
@@ -130,7 +130,7 @@ local function set_groups()
 
     -- Telescope
     TelescopeTitle  = { fg = colors.green, bg = colors.grey5, bold = true },
-    TelescopeBorder = { fg = colors.grey1, bg = colors.grey5 },
+    TelescopeBorder = { fg = colors.grey5, bg = colors.grey5 },
     TelescopeNormal = { fg = colors.white, bg = colors.grey5 },
   }
 
