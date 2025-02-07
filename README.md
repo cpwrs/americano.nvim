@@ -17,7 +17,7 @@ Call `require('americano').setup()` to change any of the options from the defaul
 -- Defaults
 require('americano').setup({
     terminal = true, -- Set terminal colors
-    commentStyle = { italic = true }
+    commentStyle = { italic = true },
     overrides = {}, -- Override highlight groups
 })
 ```
