@@ -77,7 +77,7 @@ local function set_groups()
     MsgArea         = { link = "Normal" },
 
     -- Syntax
-    Comment         = { fg = colors.grey1, italic = true },
+    Comment         = vim.tbl_extend("force", { fg = colors.grey1 }, config.commentStyle),
     Constant        = { fg = colors.orange },
     String          = { fg = colors.tea },
     Character       = { fg = colors.tea },
