@@ -3,6 +3,7 @@ local config = {
     terminal = true,
     commentStyle = { italic = true },
     overrides = {},
+    soft = false,
   },
 }
 
