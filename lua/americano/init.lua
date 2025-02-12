@@ -160,7 +160,18 @@ function americano.colorscheme()
   if config.terminal then
     set_terminal_colors()
   end
+
+  if config.soft then
+    for k,v in pairs(colors.soft) do
+      colors[k] = v
+    end
+  else
+    for k,v in pairs(colors.dark) do
+      colors[k] = v
+    end
+  end
+
   set_groups()
 end
 
-return americano
+return americano 

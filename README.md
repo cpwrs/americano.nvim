@@ -19,6 +19,7 @@ require('americano').setup({
     terminal = true, -- Set terminal colors
     commentStyle = { italic = true },
     overrides = {}, -- Override highlight groups
+    soft = false, -- Use softer background colors
 })
 ```
 
