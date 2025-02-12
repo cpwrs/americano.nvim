@@ -9,14 +9,14 @@ local colors = {
 
   -- Lightest (grey1) -> darkest (grey6)
   grey1 = "#625f5f",
-  grey2 = "#544f4d",
-  grey3 = "#45403d",
-  grey4 = "#3b3531",
-  grey5 = "#322c27",
-  grey6 = "#25201b",
+  grey2 = "#585151",
+  grey3 = "#4d4544",
+  grey4 = "#423937",
+  grey5 = "#362d2b",
+  grey6 = "#29221f",
 
   orange = "#ffb699",
-  cream = "#fdffd1",
+  cream = "#fbf1c7",
   red = "#ff5766",
   melon = "#ff909d",
   green = "#89ffcb",
