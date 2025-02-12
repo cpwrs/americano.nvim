@@ -14,7 +14,7 @@ local colors = {
   soft = {
     black = "#29221f",
     -- Lightest (grey1) -> darkest (grey6)
-    grey1 = "#757373"
+    grey1 = "#757373",
     grey2 = "#625f5f",
     grey3 = "#585151",
     grey4 = "#4d4544",
