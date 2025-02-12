@@ -174,4 +174,4 @@ function americano.colorscheme()
   set_groups()
 end
 
-return americano 
+return americano
