@@ -15,7 +15,7 @@ local function set_terminal_colors()
   vim.g.terminal_color_5 = colors.purple
   vim.g.terminal_color_6 = colors.turq
   vim.g.terminal_color_7 = colors.white
-  vim.g.terminal_color_8 = colors.dark
+  vim.g.terminal_color_8 = colors.black
   vim.g.terminal_color_9 = colors.red
   vim.g.terminal_color_10 = colors.green
   vim.g.terminal_color_11 = colors.orange

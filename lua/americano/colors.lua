@@ -1,7 +1,6 @@
 -- Color palette
 local colors = {
   black = "#1c1714",
-  dark = "#12100e",
 
   white = "#f7f7f7",
   bright = "#ffffff",
