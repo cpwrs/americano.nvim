@@ -20,6 +20,7 @@ require('americano').setup({
     commentStyle = { italic = true },
     overrides = {}, -- Override highlight groups
     soft = false, -- Use softer background colors
+    dull = false, -- Use duller foreground colors (low contrast)
 })
 ```
 

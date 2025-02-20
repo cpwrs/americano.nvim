@@ -1,10 +1,10 @@
 local config = require('americano.config')
-local colors = require('americano.colors')
+local palette = require('americano.palette')
 local americano = {}
 
 
 -- Apply terminal highlighting
-local function set_terminal_colors()
+local function set_terminal_colors(colors)
   vim.g.terminal_color_foreground = colors.white
   vim.g.terminal_color_background = colors.black
   vim.g.terminal_color_0 = colors.black
@@ -26,7 +26,7 @@ local function set_terminal_colors()
 end
 
 -- Apply group highlights
-local function set_groups()
+local function set_groups(colors)
   local groups = {
     Normal          = { fg = colors.white, bg = colors.black },
     NormalFloat     = { fg = colors.white, bg = colors.grey4 },
@@ -157,21 +157,12 @@ function americano.colorscheme()
   vim.o.termguicolors = true
   vim.g.colors_name = 'americano'
 
+  local p = palette(config.soft, config.dull)
+
   if config.terminal then
-    set_terminal_colors()
+    set_terminal_colors(p)
   end
-
-  if config.soft then
-    for k,v in pairs(colors.soft) do
-      colors[k] = v
-    end
-  else
-    for k,v in pairs(colors.dark) do
-      colors[k] = v
-    end
-  end
-
-  set_groups()
+  set_groups(p)
 end
 
 return americano

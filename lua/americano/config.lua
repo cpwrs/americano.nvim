@@ -4,6 +4,7 @@ local config = {
     commentStyle = { italic = true },
     overrides = {},
     soft = false,
+    dull = false,
   },
 }
 
