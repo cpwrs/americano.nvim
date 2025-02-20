@@ -20,10 +20,17 @@ require('americano').setup({
     commentStyle = { italic = true },
     overrides = {}, -- Override highlight groups
     soft = false, -- Use softer background colors
+    dull = false, -- Use duller foreground colors (low contrast)
 })
 ```
 
-`require('americano.colors')` returns a table of americano color hex values to use in your configuration.
+The color palette function is exposed to use the palette table in your config:
+```lua
+---@param soft boolean? Whether to use soft background colors
+---@param dull boolean? Whether to use dull foreground colors
+---@return table 
+local function palette(soft, dull)
+```
 
 ## Contributing
 
