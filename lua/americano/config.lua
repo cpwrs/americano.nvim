@@ -3,8 +3,10 @@ local config = {
     terminal = true,
     commentStyle = { italic = true },
     overrides = {},
-    soft = false,
-    dull = false,
+    palette_config = {
+      soft = false,
+      dull = false,
+    },
   },
 }
 

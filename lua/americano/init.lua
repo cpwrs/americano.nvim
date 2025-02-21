@@ -1,137 +1,135 @@
 local config = require('americano.config')
-local palette = require('americano.palette')
+local colors = require('americano.colors')
 local americano = {}
 
-
 -- Apply terminal highlighting
-local function set_terminal_colors(colors)
-  vim.g.terminal_color_foreground = colors.white
-  vim.g.terminal_color_background = colors.black
-  vim.g.terminal_color_0 = colors.black
-  vim.g.terminal_color_1 = colors.melon
-  vim.g.terminal_color_2 = colors.tea
-  vim.g.terminal_color_3 = colors.cream
-  vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_5 = colors.purple
-  vim.g.terminal_color_6 = colors.turq
-  vim.g.terminal_color_7 = colors.white
-  vim.g.terminal_color_8 = colors.black
-  vim.g.terminal_color_9 = colors.red
-  vim.g.terminal_color_10 = colors.green
-  vim.g.terminal_color_11 = colors.orange
-  vim.g.terminal_color_12 = colors.blue
-  vim.g.terminal_color_13 = colors.pink
-  vim.g.terminal_color_14 = colors.turq
-  vim.g.terminal_color_15 = colors.bright
+local function set_terminal_colors(palette)
+  vim.g.terminal_color_foreground = palette.white
+  vim.g.terminal_color_background = palette.black
+  vim.g.terminal_color_0 = palette.black
+  vim.g.terminal_color_1 = palette.melon
+  vim.g.terminal_color_2 = palette.tea
+  vim.g.terminal_color_3 = palette.cream
+  vim.g.terminal_color_4 = palette.blue
+  vim.g.terminal_color_5 = palette.purple
+  vim.g.terminal_color_6 = palette.turq
+  vim.g.terminal_color_7 = palette.white
+  vim.g.terminal_color_8 = palette.black
+  vim.g.terminal_color_9 = palette.red
+  vim.g.terminal_color_10 = palette.green
+  vim.g.terminal_color_11 = palette.orange
+  vim.g.terminal_color_12 = palette.blue
+  vim.g.terminal_color_13 = palette.pink
+  vim.g.terminal_color_14 = palette.turq
+  vim.g.terminal_color_15 = palette.bright
 end
 
 -- Apply group highlights
-local function set_groups(colors)
+local function set_groups(palette)
   local groups = {
-    Normal          = { fg = colors.white, bg = colors.black },
-    NormalFloat     = { fg = colors.white, bg = colors.grey4 },
-    FloatBorder     = { fg = colors.grey4, bg = colors.grey4 },
-    FloatTitle      = { fg = colors.green, bold = true },
-    Cursor          = { bg = colors.white, fg = colors.black },
-    CursorColumn    = { bg = colors.grey6 },
-    CursorLine      = { bg = colors.grey6 },
-    CursorLineNr    = { fg = colors.bright },
+    Normal          = { fg = palette.white, bg = palette.black },
+    NormalFloat     = { fg = palette.white, bg = palette.grey4 },
+    FloatBorder     = { fg = palette.grey4, bg = palette.grey4 },
+    FloatTitle      = { fg = palette.green, bold = true },
+    Cursor          = { bg = palette.white, fg = palette.black },
+    CursorColumn    = { bg = palette.grey6 },
+    CursorLine      = { bg = palette.grey6 },
+    CursorLineNr    = { fg = palette.bright },
     ColorColumn     = { link = "CursorLine" },
-    LineNr          = { fg = colors.grey1 },
+    LineNr          = { fg = palette.grey1 },
 
-    Directory       = { fg = colors.bright },
-    ErrorMsg        = { fg = colors.red },
-    WarningMsg      = { fg = colors.orange },
-    WinSeparator    = { fg = colors.grey3, bg = colors.black },
+    Directory       = { fg = palette.bright },
+    ErrorMsg        = { fg = palette.red },
+    WarningMsg      = { fg = palette.orange },
+    WinSeparator    = { fg = palette.grey3, bg = palette.black },
     VertSplit       = { link = "WinSeperator" },
-    Folded          = { fg = colors.grey1 },
-    FoldColumn      = { bg = colors.black },
-    SignColumn      = { bg = colors.bg },
+    Folded          = { fg = palette.grey1 },
+    FoldColumn      = { bg = palette.black },
+    SignColumn      = { bg = palette.bg },
 
-    MatchParen      = { fg = colors.bright, bg = colors.grey1 },
-    ModeMsg         = { fg = colors.pink },
-    MoreMsg         = { fg = colors.orange },
-    NonText         = { fg = colors.grey1 },
-    Pmenu           = { fg = colors.white, bg = colors.grey5 },
-    PmenuSel        = { fg = colors.bright, bg = colors.grey3, bold = true },
-    PmenuKind       = { fg = colors.grey1, bg = colors.grey5, italic = true },
-    PmenuKindSel    = { fg = colors.orange, bg = colors.grey3, italic = true },
-    PmenuSbar       = { fg = colors.tea, bg = colors.grey4 },
-    PmenuThumb      = { bg = colors.cream },
-    QuickFixLine    = { fg = colors.turq },
-    Question        = { fg = colors.tea },
-    IncSearch       = { fg = colors.bright, bg = colors.grey1 },
-    CurSearch       = { fg = colors.bright, bg = colors.grey1 },
-    Search          = { fg = colors.white, bg = colors.grey2 },
-    SpellBad        = { sp = colors.red, undercurl = true },
-    SpellCap        = { sp = colors.cream, undercurl = true },
-    SpellLocal      = { sp = colors.tea, undercurl = true },
-    SpellRare       = { sp = colors.turq, undercurl = true },
-    StatusLine      = { fg = colors.white, bg = colors.grey4 },
-    StatusLineNC    = { fg = colors.white, bg = colors.grey4 },
-    TabLine         = { fg = colors.grey1, bg = colors.grey5 },
-    TabLineSel      = { fg = colors.bright, bg = colors.black },
-    TabLineFill     = { fg = colors.grey1, bg = colors.grey5 },
-    Visual          = { bg = colors.grey5 },
-    Conceal         = { fg = colors.offwhite }, 
+    MatchParen      = { fg = palette.bright, bg = palette.grey1 },
+    ModeMsg         = { fg = palette.pink },
+    MoreMsg         = { fg = palette.orange },
+    NonText         = { fg = palette.grey1 },
+    Pmenu           = { fg = palette.white, bg = palette.grey5 },
+    PmenuSel        = { fg = palette.bright, bg = palette.grey3, bold = true },
+    PmenuKind       = { fg = palette.grey1, bg = palette.grey5, italic = true },
+    PmenuKindSel    = { fg = palette.orange, bg = palette.grey3, italic = true },
+    PmenuSbar       = { fg = palette.tea, bg = palette.grey4 },
+    PmenuThumb      = { bg = palette.cream },
+    QuickFixLine    = { fg = palette.turq },
+    Question        = { fg = palette.tea },
+    CurSearch       = { fg = palette.bright, bg = palette.grey1 },
+    Search          = { fg = palette.white, bg = palette.grey5 },
+    SpellBad        = { sp = palette.red, undercurl = true },
+    SpellCap        = { sp = palette.cream, undercurl = true },
+    SpellLocal      = { sp = palette.tea, undercurl = true },
+    SpellRare       = { sp = palette.turq, undercurl = true },
+    StatusLine      = { fg = palette.white, bg = palette.grey4 },
+    StatusLineNC    = { fg = palette.white, bg = palette.grey4 },
+    TabLine         = { fg = palette.grey1, bg = palette.grey5 },
+    TabLineSel      = { fg = palette.bright, bg = palette.black },
+    TabLineFill     = { fg = palette.grey1, bg = palette.grey5 },
+    Visual          = { bg = palette.grey5 },
+    Conceal         = { fg = palette.offwhite }, 
     MsgArea         = { link = "Normal" },
 
     -- Syntax
-    Comment         = vim.tbl_extend("force", { fg = colors.grey1 }, config.commentStyle),
-    Constant        = { fg = colors.orange },
-    String          = { fg = colors.tea },
-    Character       = { fg = colors.tea },
-    Number          = { fg = colors.melon },
-    Boolean         = { fg = colors.purple },
-    Float           = { fg = colors.melon },
-    Identifier      = { fg = colors.cream },
-    Function        = { fg = colors.blue },
-    Conditional     = { fg = colors.pink },
-    Statement       = { fg = colors.pink },
-    Repeat          = { fg = colors.turq },
-    Label           = { fg = colors.purple },
-    Operator        = { fg = colors.green },
-    Keyword         = { fg = colors.turq },
-    Exception       = { fg = colors.red },
-    PreProc         = { fg = colors.purple },
-    PreCondit       = { fg = colors.purple },
-    Include         = { fg = colors.green },
-    Ignore          = { fg = colors.white },
-    Define          = { fg = colors.green },
-    Type            = { fg = colors.cream },
-    StorageClass    = { fg = colors.white },
-    Structure       = { fg = colors.white },
-    Typedef         = { fg = colors.white },
-    Special         = { fg = colors.pink },
-    Delimiter       = { fg = colors.offwhite },
-    Underlined      = { fg = colors.white },
+    Comment         = vim.tbl_extend("force", { fg = palette.grey1 }, config.commentStyle),
+    Constant        = { fg = palette.orange },
+    String          = { fg = palette.tea },
+    Character       = { fg = palette.tea },
+    Number          = { fg = palette.melon },
+    Boolean         = { fg = palette.purple },
+    Float           = { fg = palette.melon },
+    Identifier      = { fg = palette.cream },
+    Function        = { fg = palette.blue },
+    Conditional     = { fg = palette.pink },
+    Statement       = { fg = palette.pink },
+    Repeat          = { fg = palette.turq },
+    Label           = { fg = palette.purple },
+    Operator        = { fg = palette.green },
+    Keyword         = { fg = palette.turq },
+    Exception       = { fg = palette.red },
+    PreProc         = { fg = palette.purple },
+    PreCondit       = { fg = palette.purple },
+    Include         = { fg = palette.green },
+    Ignore          = { fg = palette.white },
+    Define          = { fg = palette.green },
+    Type            = { fg = palette.cream },
+    StorageClass    = { fg = palette.white },
+    Structure       = { fg = palette.white },
+    Typedef         = { fg = palette.white },
+    Special         = { fg = palette.pink },
+    Delimiter       = { fg = palette.offwhite },
+    Underlined      = { fg = palette.white },
     Bold            = { bold = true },
     Italic          = { italic = true },
-    Error           = { fg = colors.red },
+    Error           = { fg = palette.red },
 
-    Added           = { fg = colors.green },
-    Removed         = { fg = colors.red },
-    Changed         = { fg = colors.blue },
-    DiffAdd         = { bg = colors.green, fg = colors.black },
-    DiffChange      = { bg = colors.blue, fg = colors.black },
-    DiffDelete      = { bg = colors.red, fg = colors.black },
-    DiffText        = { bg = colors.grey2, fg = colors.white },
+    Added           = { fg = palette.green },
+    Removed         = { fg = palette.red },
+    Changed         = { fg = palette.blue },
+    DiffAdd         = { bg = palette.green, fg = palette.black },
+    DiffChange      = { bg = palette.blue, fg = palette.black },
+    DiffDelete      = { bg = palette.red, fg = palette.black },
+    DiffText        = { bg = palette.grey2, fg = palette.white },
 
     -- Diagnostics
-    DiagnosticError = { fg = colors.red, bg = "none" },
-    DiagnosticWarn  = { fg = colors.orange, bg = "none" },
-    DiagnosticInfo  = { fg = colors.blue, bg = "none" },
-    DiagnosticHint  = { fg = colors.green, bg = "none" },
+    DiagnosticError = { fg = palette.red, bg = "none" },
+    DiagnosticWarn  = { fg = palette.orange, bg = "none" },
+    DiagnosticInfo  = { fg = palette.blue, bg = "none" },
+    DiagnosticHint  = { fg = palette.green, bg = "none" },
     DiagnosticUnnecessary = {},
-    DiagnosticUnderlineError = { underline = true, sp = colors.red },
-    DiagnosticUnderlineWarn = { underline = true,  sp = colors.orange },
-    DiagnosticUnderlineInfo = { underline = true, sp = colors.blue },
-    DiagnosticUnderlineHint = { underline = true, sp = colors.green },
+    DiagnosticUnderlineError = { underline = true, sp = palette.red },
+    DiagnosticUnderlineWarn = { underline = true,  sp = palette.orange },
+    DiagnosticUnderlineInfo = { underline = true, sp = palette.blue },
+    DiagnosticUnderlineHint = { underline = true, sp = palette.green },
 
     -- Telescope
-    TelescopeTitle  = { fg = colors.green, bg = colors.grey5, bold = true },
-    TelescopeBorder = { fg = colors.grey5, bg = colors.grey5 },
-    TelescopeNormal = { fg = colors.white, bg = colors.grey5 },
+    TelescopeTitle  = { fg = palette.green, bg = palette.grey5, bold = true },
+    TelescopeBorder = { fg = palette.grey5, bg = palette.grey5 },
+    TelescopeNormal = { fg = palette.white, bg = palette.grey5 },
   }
 
   groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
@@ -142,9 +140,20 @@ local function set_groups(colors)
 end
 
 -- Apply user settings
----@param values table
 function americano.setup(values)
   setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) })
+end
+
+function americano.getPalette(palette_config)
+  soft = palette_config.soft or false
+  dull = palette_config.dull or false
+
+  local final = {}
+
+  local bg = soft and colors.soft_bg or colors.default_bg
+  local fg = dull and colors.dull_fg or colors.default_fg
+
+  return vim.tbl_extend("force", bg, fg)
 end
 
 -- Set the colorscheme
@@ -157,7 +166,7 @@ function americano.colorscheme()
   vim.o.termguicolors = true
   vim.g.colors_name = 'americano'
 
-  local p = palette(config.soft, config.dull)
+  local p = americano.getPalette(config.palette_config)
 
   if config.terminal then
     set_terminal_colors(p)
