@@ -53,7 +53,7 @@ local function set_groups(palette)
     NonText         = { fg = palette.grey1 },
     Pmenu           = { fg = palette.white, bg = palette.grey5 },
     PmenuSel        = { fg = palette.bright, bg = palette.grey3, bold = true },
-    PmenuKind       = { fg = palette.grey1, bg = palette.grey5, italic = true },
+    PmenuKind       = { fg = palette.grey1, italic = true },
     PmenuKindSel    = { fg = palette.orange, bg = palette.grey3, italic = true },
     PmenuSbar       = { fg = palette.tea, bg = palette.grey4 },
     PmenuThumb      = { bg = palette.cream },
