@@ -28,7 +28,7 @@ local colors = {
 
   default_fg = {
     orange = "#ffb699",
-    cream = "#fbf1c7",
+    cream = "#fdffd1",
     red = "#ff5766",
     melon = "#ff909d",
     green = "#89ffcb",
@@ -41,7 +41,7 @@ local colors = {
 
   dull_fg = {
     orange = "#fbd7c8",
-    cream = "#f9f4df",
+    cream = "#fafbe4",
     red = "#fba7af",
     melon = "#fbc4ca",
     green = "#c0fbe1",

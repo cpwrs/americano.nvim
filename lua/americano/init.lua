@@ -60,7 +60,7 @@ local function set_groups(palette)
     QuickFixLine    = { fg = palette.turq },
     Question        = { fg = palette.tea },
     CurSearch       = { fg = palette.bright, bg = palette.grey1 },
-    Search          = { fg = palette.white, bg = palette.grey5 },
+    Search          = { fg = palette.white, bg = palette.grey4 },
     SpellBad        = { sp = palette.red, undercurl = true },
     SpellCap        = { sp = palette.cream, undercurl = true },
     SpellLocal      = { sp = palette.tea, undercurl = true },
