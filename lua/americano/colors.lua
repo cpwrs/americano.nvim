@@ -1,6 +1,10 @@
 -- Color palette
 local colors = {
-  default_bg = { -- Default background colors
+  white = "#f7f7f7",
+  bright = "#ffffff",
+  offwhite = "#adabab",
+
+  default_bg = {
     black = "#1c1714", 
     -- Lightest (grey1) -> darkest (grey6)
     grey1 = "#625f5f",
@@ -23,12 +27,8 @@ local colors = {
   },
 
   default_fg = {
-    white = "#f7f7f7",
-    bright = "#ffffff",
-    offwhite = "#adabab",
-
     orange = "#ffb699",
-    cream = "#fbf1c7",
+    cream = "#fdffd1",
     red = "#ff5766",
     melon = "#ff909d",
     green = "#89ffcb",
@@ -40,12 +40,8 @@ local colors = {
   },
 
   dull_fg = {
-    white = "#f7f7f7",
-    bright = "#ffffff",
-    offwhite = "#adabab",
-
     orange = "#fbd7c8",
-    cream = "#f9f4df",
+    cream = "#fafbe4",
     red = "#fba7af",
     melon = "#fbc4ca",
     green = "#c0fbe1",
@@ -57,16 +53,4 @@ local colors = {
   },
 }
 
-local function palette(soft, dull)
-  soft = soft or false
-  dull = dull or false
-
-  local final = {}
-
-  local bg = soft and colors.soft_bg or colors.default_bg
-  local fg = dull and colors.dull_fg or colors.default_fg
-  
-  return vim.tbl_extend("force", bg, fg)
-end
-
-return palette
+return colors

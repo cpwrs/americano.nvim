@@ -4,10 +4,16 @@ Dark colorscheme for neovim. A smooth blend of neon nostalgia with a splash of w
 
 ![image](https://github.com/user-attachments/assets/c939f718-e683-4872-81a8-ebb2ee7f1042)
 
-## Usage
+## Installation
 
 Download americano with any package manager on neovim latest.
-Add `colorscheme americano` (vimscript) or `require('americano').colorscheme()` (lua) to apply the colorscheme.
+To apply the colorscheme, execute:
+```vimscript
+colorscheme americano
+```
+```lua
+require('americano').colorscheme()
+```
 
 ## Configuration
 
@@ -17,22 +23,21 @@ Call `require('americano').setup()` to change any of the options from the defaul
 -- Defaults
 require('americano').setup({
     terminal = true, -- Set terminal colors
-    commentStyle = { italic = true },
+    commentStyle = { italic = true }, -- Quickly change style of comment hl group
     overrides = {}, -- Override highlight groups
-    soft = false, -- Use softer background colors
-    dull = false, -- Use duller foreground colors (low contrast)
+    palette_config = {
+        soft = false, -- Use softer background colors
+        dull = false, -- Use duller foreground colors (low contrast)
+    },
 })
 ```
 
-The color palette function is exposed to use the palette table in your config:
+To grab a table of americano colors for other customizations, pass a palette_config to getPalette:
 ```lua
----@param soft boolean? Whether to use soft background colors
----@param dull boolean? Whether to use dull foreground colors
----@return table 
-local function palette(soft, dull)
+local palette = require('americano').getPalette({soft = false, dull = false})
 ```
 
 ## Contributing
 
-Americano is minimal and unlikely to add many colors, but I want to support more plugins, highlight groups, and configurations! 
+I want to support more plugins, highlight groups, and configurations! 
 Open a PR and include a screenshot showing the change for review. 
