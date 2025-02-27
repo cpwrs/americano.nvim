@@ -35,7 +35,7 @@ require('americano').setup({
 
 To grab a table of americano colors for other customizations, pass a palette_config to getPalette:
 ```lua
-local palette = require('americano').getPalette({soft = false, dull = false})
+require('americano').getPalette({soft = false, dull = false})
 ```
 
 ## Contributing
