@@ -2,8 +2,7 @@
 
 Dark colorscheme for neovim. A smooth blend of neon nostalgia with a splash of warmth.
 
-![image](https://github.com/user-attachments/assets/c939f718-e683-4872-81a8-ebb2ee7f1042)
-![palette_configs](https://github.com/user-attachments/assets/8b86500f-281f-43ee-ae09-318e4f56fa12)
+![americano](https://github.com/user-attachments/assets/8b86500f-281f-43ee-ae09-318e4f56fa12)
 
 ## Installation
 
