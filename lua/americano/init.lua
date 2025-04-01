@@ -44,8 +44,8 @@ local function set_groups(palette)
     WinSeparator    = { fg = palette.grey3, bg = palette.black },
     VertSplit       = { link = "WinSeperator" },
     Folded          = { bg = palette.black },
-    FoldColumn      = { bg = palette.bg },
-    SignColumn      = { bg = palette.bg },
+    FoldColumn      = { bg = palette.grey5 },
+    SignColumn      = { bg = palette.black },
 
     MatchParen      = { fg = palette.bright, bg = palette.grey1 },
     ModeMsg         = { fg = palette.pink },
