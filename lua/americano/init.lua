@@ -71,7 +71,7 @@ local function set_groups(palette)
     TabLineSel      = { fg = palette.bright, bg = palette.black },
     TabLineFill     = { fg = palette.grey1, bg = palette.grey5 },
     Visual          = { bg = palette.grey5 },
-    Conceal         = { fg = palette.offwhite }, 
+    Conceal         = { fg = palette.offwhite },
     MsgArea         = { link = "Normal" },
 
     -- Syntax
@@ -145,10 +145,8 @@ function americano.setup(values)
 end
 
 function americano.getPalette(palette_config)
-  soft = palette_config.soft or false
-  dull = palette_config.dull or false
-
-  local final = {}
+  local soft = palette_config.soft or false
+  local dull = palette_config.dull or false
 
   local bg = soft and colors.soft_bg or colors.default_bg
   local fg = dull and colors.dull_fg or colors.default_fg
