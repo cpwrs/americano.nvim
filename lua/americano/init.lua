@@ -43,7 +43,7 @@ local function set_groups(palette)
     WarningMsg      = { fg = palette.orange },
     WinSeparator    = { fg = palette.grey3, bg = palette.black },
     VertSplit       = { link = "WinSeperator" },
-    Folded          = { fg = palette.black },
+    Folded          = { bg = palette.black },
     FoldColumn      = { bg = palette.bg },
     SignColumn      = { bg = palette.bg },
 
