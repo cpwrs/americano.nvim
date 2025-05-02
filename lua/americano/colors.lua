@@ -5,7 +5,7 @@ local colors = {
   offwhite = "#adabab",
 
   default_bg = {
-    black = "#1c1714", 
+    black = "#1c1714",
     -- Lightest (grey1) -> darkest (grey6)
     grey1 = "#625f5f",
     grey2 = "#585151",

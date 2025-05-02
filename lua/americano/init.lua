@@ -148,10 +148,18 @@ function americano.getPalette(palette_config)
   local soft = palette_config.soft or false
   local dull = palette_config.dull or false
 
-  local bg = soft and colors.soft_bg or colors.default_bg
-  local fg = dull and colors.dull_fg or colors.default_fg
+  local bg_source = soft and colors.soft_bg or colors.default_bg
+  local fg_source = dull and colors.dull_fg or colors.default_fg
 
-  return vim.tbl_extend("force", bg, fg)
+  return vim.tbl_deep_extend("force",
+    {
+      white = colors.white,
+      bright = colors.bright,
+      offwhite = colors.offwhite,
+    },
+    bg_source,
+    fg_source
+  )
 end
 
 -- Set the colorscheme
