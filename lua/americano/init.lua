@@ -127,7 +127,7 @@ local function set_groups(palette)
     DiagnosticUnderlineHint = { underline = true, sp = palette.green },
 
     -- Telescope
-    TelescopeTitle  = { fg = palette.white, bg = palette.grey5, bold = true },
+    TelescopeTitle  = { fg = palette.white, bg = palette.black, bold = true },
     TelescopeBorder = { fg = palette.grey5, bg = palette.black },
     TelescopeNormal = { fg = palette.white, bg = palette.black },
   }
