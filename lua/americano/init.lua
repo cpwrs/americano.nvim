@@ -127,9 +127,9 @@ local function set_groups(palette)
     DiagnosticUnderlineHint = { underline = true, sp = palette.green },
 
     -- Telescope
-    TelescopeTitle  = { fg = palette.green, bg = palette.grey5, bold = true },
-    TelescopeBorder = { fg = palette.grey5, bg = palette.grey5 },
-    TelescopeNormal = { fg = palette.white, bg = palette.grey5 },
+    TelescopeTitle  = { fg = palette.white, bg = palette.grey5, bold = true },
+    TelescopeBorder = { fg = palette.grey5, bg = palette.black },
+    TelescopeNormal = { fg = palette.white, bg = palette.black },
   }
 
   groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
