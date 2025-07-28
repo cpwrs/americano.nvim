@@ -5,14 +5,14 @@ local colors = {
   offwhite = "#adabab",
 
   default_bg = {
-    black = "#1c1714",
+    black = "#000000",
     -- Lightest (grey1) -> darkest (grey6)
-    grey1 = "#625f5f",
-    grey2 = "#585151",
-    grey3 = "#4d4544",
-    grey4 = "#423937",
-    grey5 = "#362d2b",
-    grey6 = "#29221f",
+    grey1 = "#55504d",
+    grey2 = "#433f3c",
+    grey3 = "#302d2b",
+    grey4 = "#201e1d",
+    grey5 = "#100f0f",
+    grey6 = "#080808",
   },
 
   soft_bg = {
