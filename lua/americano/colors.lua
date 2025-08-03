@@ -5,14 +5,14 @@ local colors = {
   offwhite = "#adabab",
 
   black_bg = {
-    black = "#0a0808",
+    black = "#070605",
     -- Lightest (grey1) -> darkest (grey6)
-    grey1 = "#7e7d7a",
-    grey2 = "#6b6a67",
-    grey3 = "#575654",
-    grey4 = "#444341",
-    grey5 = "#312f2e",
-    grey6 = "#1d1c1b",
+    grey1 = "#7d7c79",
+    grey2 = "#696866",
+    grey3 = "#565552",
+    grey4 = "#42413f",
+    grey5 = "#2e2d2c",
+    grey6 = "#1b1a18",
   },
 
   cream_bg = {
