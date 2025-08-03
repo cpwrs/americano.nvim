@@ -1,10 +1,21 @@
 -- Color palette
 local colors = {
-  white = "#f7f7f7",
+  white = "#f2f1ec",
   bright = "#ffffff",
   offwhite = "#adabab",
 
-  default_bg = {
+  black_bg = {
+    black = "#0a0808",
+    -- Lightest (grey1) -> darkest (grey6)
+    grey1 = "#1d1c1b",
+    grey2 = "#312f2e",
+    grey3 = "#444341",
+    grey4 = "#575654",
+    grey5 = "#6b6a67",
+    grey6 = "#7e7d7a",
+  },
+
+  cream_bg = {
     black = "#1c1714",
     -- Lightest (grey1) -> darkest (grey6)
     grey1 = "#625f5f",
@@ -13,17 +24,6 @@ local colors = {
     grey4 = "#423937",
     grey5 = "#362d2b",
     grey6 = "#29221f",
-  },
-
-  soft_bg = {
-    black = "#29221f",
-    -- Lightest (grey1) -> darkest (grey6)
-    grey1 = "#757373",
-    grey2 = "#625f5f",
-    grey3 = "#585151",
-    grey4 = "#4d4544",
-    grey5 = "#423937",
-    grey6 = "#362d2b",
   },
 
   default_fg = {

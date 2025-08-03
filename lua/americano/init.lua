@@ -145,10 +145,10 @@ function americano.setup(values)
 end
 
 function americano.getPalette(palette_config)
-  local soft = palette_config.soft or false
+  local creamer = palette_config.creamer or false
   local dull = palette_config.dull or false
 
-  local bg_source = soft and colors.soft_bg or colors.default_bg
+  local bg_source = creamer and colors.cream_bg or colors.black_bg
   local fg_source = dull and colors.dull_fg or colors.default_fg
 
   return vim.tbl_deep_extend("force",
