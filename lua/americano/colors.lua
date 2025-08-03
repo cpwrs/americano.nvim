@@ -7,12 +7,12 @@ local colors = {
   black_bg = {
     black = "#0a0808",
     -- Lightest (grey1) -> darkest (grey6)
-    grey1 = "#1d1c1b",
-    grey2 = "#312f2e",
-    grey3 = "#444341",
-    grey4 = "#575654",
-    grey5 = "#6b6a67",
-    grey6 = "#7e7d7a",
+    grey1 = "#7e7d7a",
+    grey2 = "#6b6a67",
+    grey3 = "#575654",
+    grey4 = "#444341",
+    grey5 = "#312f2e",
+    grey6 = "#1d1c1b",
   },
 
   cream_bg = {
