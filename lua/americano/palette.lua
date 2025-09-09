@@ -19,12 +19,12 @@ local palette = {
   pink = "#ffb1f5",
   orange = "#ffb699",
   offwhite = "#adabab",
-  grey1 = "#191613",
-  grey2 = "#241f1c",
-  grey3 = "#3a322e",
-  grey4 = "#524844",
-  grey5 = "#695d59",
-  grey6 = "#7b6d68",
+  grey6 = "#191613",
+  grey5 = "#241f1c",
+  grey4 = "#3a322e",
+  grey3 = "#524844",
+  grey2 = "#695d59",
+  grey1 = "#7b6d68",
 }
 
 return palette
