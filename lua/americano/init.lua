@@ -11,7 +11,7 @@ local function set_terminal_colors()
   vim.g.terminal_color_2 = palette.green
   vim.g.terminal_color_3 = palette.yellow
   vim.g.terminal_color_4 = palette.blue
-  vim.g.terminal_color_5 = palette.indigo
+  vim.g.terminal_color_5 = palette.magenta
   vim.g.terminal_color_6 = palette.cyan
   vim.g.terminal_color_7 = palette.white
   vim.g.terminal_color_8 = palette.intense_black
@@ -19,7 +19,7 @@ local function set_terminal_colors()
   vim.g.terminal_color_10 = palette.intense_green
   vim.g.terminal_color_11 = palette.intense_yellow
   vim.g.terminal_color_12 = palette.intense_blue
-  vim.g.terminal_color_13 = palette.intense_indigo
+  vim.g.terminal_color_13 = palette.intense_magenta
   vim.g.terminal_color_14 = palette.intense_cyan
   vim.g.terminal_color_15 = palette.intense_white
 end
@@ -82,24 +82,24 @@ local function set_groups()
     String          = { fg = palette.green },
     Character       = { fg = palette.green },
     Number          = { fg = palette.red },
-    Boolean         = { fg = palette.indigo },
+    Boolean         = { fg = palette.magenta },
     Float           = { fg = palette.red },
     Identifier      = { fg = palette.yellow },
     Function        = { fg = palette.blue },
     Conditional     = { fg = palette.pink },
     Statement       = { fg = palette.pink },
     Repeat          = { fg = palette.cyan },
-    Label           = { fg = palette.intense_indigo },
+    Label           = { fg = palette.intense_magenta },
     Operator        = { fg = palette.intense_green },
     Keyword         = { fg = palette.cyan },
     Exception       = { fg = palette.intense_red },
-    PreProc         = { fg = palette.intense_indigo },
-    PreCondit       = { fg = palette.intense_indigo },
+    PreProc         = { fg = palette.intense_magenta },
+    PreCondit       = { fg = palette.intense_magenta },
     Include         = { fg = palette.intense_green },
     Ignore          = { fg = palette.white },
     Define          = { fg = palette.intense_green },
     Type            = { fg = palette.yellow },
-    StorageClass    = { fg = palette.intense_indigo },
+    StorageClass    = { fg = palette.intense_magenta },
     Structure       = { fg = palette.white },
     Typedef         = { fg = palette.white },
     Special         = { fg = palette.pink },
