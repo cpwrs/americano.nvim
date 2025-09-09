@@ -1,0 +1,30 @@
+local palette = {
+  black = "#0e0c0a",
+  red = "#ff909d",
+  green = "#d3ffdb",
+  yellow = "#fdffd1",
+  blue = "#aec1ff",
+  magenta = "#ddb6ff",
+  cyan = "#c9fafa",
+  white = "#f7f7f7",
+  intense_black = "#000000",
+  intense_red = "#ff6571",
+  intense_green = "#89ffcb",
+  intense_yellow = "#ffff99",
+  intense_blue = "#7d9eff",
+  intense_magenta = "#aa93ff",
+  intense_cyan = "#95fbfb",
+  intense_white = "#ffffff",
+
+  pink = "#ffb1f5",
+  orange = "#ffb699",
+  offwhite = "#adabab",
+  grey6 = "#191613",
+  grey5 = "#241f1c",
+  grey4 = "#3a322e",
+  grey3 = "#524844",
+  grey2 = "#695d59",
+  grey1 = "#7b6d68",
+}
+
+return palette
