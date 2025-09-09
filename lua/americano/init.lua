@@ -24,6 +24,8 @@ local function set_terminal_colors()
   vim.g.terminal_color_15 = palette.intense_white
 end
 
+
+
 -- Apply group highlights
 local function set_groups()
   local groups = {
@@ -158,6 +160,10 @@ function americano.colorscheme()
     set_terminal_colors()
   end
   set_groups()
+end
+
+function americano.getPalette()
+  return palette
 end
 
 return americano
