@@ -26,3 +26,5 @@ local palette = {
   grey5 = "#695d59",
   grey6 = "#7b6d68",
 }
+
+return palette
