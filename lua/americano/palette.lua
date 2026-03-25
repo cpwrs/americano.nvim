@@ -1,5 +1,5 @@
 local palette = {
-  black = "#0e0c0a",
+  black = "#221a14",
   red = "#ff909d",
   green = "#d3ffdb",
   yellow = "#fdffd1",
@@ -15,16 +15,14 @@ local palette = {
   intense_magenta = "#aa93ff",
   intense_cyan = "#95fbfb",
   intense_white = "#ffffff",
-
   pink = "#ffb1f5",
   orange = "#ffb699",
   offwhite = "#adabab",
-  grey6 = "#191613",
-  grey5 = "#241f1c",
-  grey4 = "#3a322e",
-  grey3 = "#524844",
-  grey2 = "#695d59",
-  grey1 = "#7b6d68",
+  grey6 = "#2a2520",
+  grey5 = "#3d3028",
+  grey4 = "#524840",
+  grey3 = "#665c55",
+  grey2 = "#7a706a",
+  grey1 = "#8c8480",
 }
-
 return palette
