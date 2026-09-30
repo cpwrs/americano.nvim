@@ -4,8 +4,8 @@ local americano = {}
 
 -- Apply terminal highlighting
 local function set_terminal_colors()
-  vim.g.terminal_color_foreground = palette.white
-  vim.g.terminal_color_background = palette.black
+  vim.g.terminal_color_foreground = palette.black
+  vim.g.terminal_color_background = palette.white
   vim.g.terminal_color_0 = palette.black
   vim.g.terminal_color_1 = palette.red
   vim.g.terminal_color_2 = palette.green
@@ -29,48 +29,48 @@ end
 -- Apply group highlights
 local function set_groups()
   local groups = {
-    Normal          = { fg = palette.white, bg = palette.black },
-    NormalFloat     = { fg = palette.white, bg = palette.grey4 },
+    Normal          = { fg = palette.black, bg = palette.white },
+    NormalFloat     = { fg = palette.black, bg = palette.grey4 },
     FloatBorder     = { fg = palette.grey4, bg = palette.grey4 },
     FloatTitle      = { fg = palette.intense_green, bold = true },
-    Cursor          = { bg = palette.white, fg = palette.black },
+    Cursor          = { bg = palette.black, fg = palette.white },
     CursorColumn    = { bg = palette.grey6 },
     CursorLine      = { bg = palette.grey6 },
-    CursorLineNr    = { fg = palette.intense_white },
+    CursorLineNr    = { fg = palette.intense_black },
     ColorColumn     = { link = "CursorLine" },
     LineNr          = { fg = palette.grey1 },
 
-    Directory       = { fg = palette.intense_white },
+    Directory       = { fg = palette.intense_black },
     ErrorMsg        = { fg = palette.intense_red },
     WarningMsg      = { fg = palette.orange },
-    WinSeparator    = { fg = palette.grey3, bg = palette.black },
+    WinSeparator    = { fg = palette.grey3, bg = palette.white },
     VertSplit       = { link = "WinSeparator" },
     Folded          = { bg = palette.grey5 },
-    FoldColumn      = { bg = palette.black },
-    SignColumn      = { bg = palette.black },
+    FoldColumn      = { bg = palette.white },
+    SignColumn      = { bg = palette.white },
 
-    MatchParen      = { fg = palette.intense_white, bg = palette.grey1 },
+    MatchParen      = { fg = palette.intense_black, bg = palette.grey3 },
     ModeMsg         = { fg = palette.pink },
     MoreMsg         = { fg = palette.orange },
     NonText         = { fg = palette.grey1 },
-    Pmenu           = { fg = palette.white, bg = palette.grey5 },
-    PmenuSel        = { fg = palette.intense_white, bg = palette.grey3, bold = true },
+    Pmenu           = { fg = palette.black, bg = palette.grey5 },
+    PmenuSel        = { fg = palette.intense_black, bg = palette.grey3, bold = true },
     PmenuKind       = { fg = palette.grey1, italic = true },
-    PmenuKindSel    = { fg = palette.orange, bg = palette.grey3, italic = true },
+    PmenuKindSel    = { fg = palette.black, bg = palette.grey3, italic = true },
     PmenuSbar       = { fg = palette.green, bg = palette.grey4 },
     PmenuThumb      = { bg = palette.yellow },
     QuickFixLine    = { fg = palette.cyan },
     Question        = { fg = palette.green },
-    CurSearch       = { fg = palette.intense_white, bg = palette.grey1 },
-    Search          = { fg = palette.white, bg = palette.grey4 },
+    CurSearch       = { fg = palette.intense_black, bg = palette.grey3 },
+    Search          = { fg = palette.black, bg = palette.grey4 },
     SpellBad        = { sp = palette.intense_red, undercurl = true },
     SpellCap        = { sp = palette.yellow, undercurl = true },
     SpellLocal      = { sp = palette.green, undercurl = true },
     SpellRare       = { sp = palette.cyan, undercurl = true },
-    StatusLine      = { fg = palette.white, bg = palette.grey5 },
-    StatusLineNC    = { fg = palette.white, bg = palette.grey6 },
+    StatusLine      = { fg = palette.black, bg = palette.grey5 },
+    StatusLineNC    = { fg = palette.black, bg = palette.grey6 },
     TabLine         = { fg = palette.grey1, bg = palette.grey5 },
-    TabLineSel      = { fg = palette.intense_white, bg = palette.black },
+    TabLineSel      = { fg = palette.intense_black, bg = palette.white },
     TabLineFill     = { fg = palette.grey1, bg = palette.grey5 },
     Visual          = { bg = palette.grey5 },
     Conceal         = { fg = palette.offwhite },
@@ -96,15 +96,15 @@ local function set_groups()
     PreProc         = { fg = palette.intense_magenta },
     PreCondit       = { fg = palette.intense_magenta },
     Include         = { fg = palette.intense_green },
-    Ignore          = { fg = palette.white },
+    Ignore          = { fg = palette.black },
     Define          = { fg = palette.intense_green },
     Type            = { fg = palette.yellow },
     StorageClass    = { fg = palette.intense_magenta },
-    Structure       = { fg = palette.white },
-    Typedef         = { fg = palette.white },
+    Structure       = { fg = palette.black },
+    Typedef         = { fg = palette.black },
     Special         = { fg = palette.pink },
     Delimiter       = { fg = palette.offwhite },
-    Underlined      = { fg = palette.white },
+    Underlined      = { fg = palette.black },
     Bold            = { bold = true },
     Italic          = { italic = true },
     Error           = { fg = palette.intense_red },
@@ -112,10 +112,10 @@ local function set_groups()
     Added           = { fg = palette.intense_green },
     Removed         = { fg = palette.intense_red },
     Changed         = { fg = palette.blue },
-    DiffAdd         = { bg = palette.intense_green, fg = palette.black },
-    DiffChange      = { bg = palette.blue, fg = palette.black },
-    DiffDelete      = { bg = palette.intense_red, fg = palette.black },
-    DiffText        = { bg = palette.grey2, fg = palette.white },
+    DiffAdd         = { bg = palette.diff_add, fg = palette.black },
+    DiffChange      = { bg = palette.diff_change, fg = palette.black },
+    DiffDelete      = { bg = palette.diff_delete, fg = palette.black },
+    DiffText        = { bg = palette.diff_text, fg = palette.black },
 
     -- Diagnostics
     DiagnosticError = { fg = palette.intense_red, bg = "none" },
@@ -129,9 +129,9 @@ local function set_groups()
     DiagnosticUnderlineHint = { underline = true, sp = palette.intense_green },
 
     -- Telescope
-    TelescopeTitle  = { fg = palette.white, bg = palette.black, bold = true },
-    TelescopeBorder = { fg = palette.grey5, bg = palette.black },
-    TelescopeNormal = { fg = palette.white, bg = palette.black },
+    TelescopeTitle  = { fg = palette.black, bg = palette.white, bold = true },
+    TelescopeBorder = { fg = palette.grey5, bg = palette.white },
+    TelescopeNormal = { fg = palette.black, bg = palette.white },
   }
 
   groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
@@ -148,6 +148,7 @@ end
 
 -- Set the colorscheme
 function americano.colorscheme()
+  vim.o.background = 'light'
   vim.api.nvim_command('hi clear')
   if vim.fn.exists('syntax_on') then
     vim.api.nvim_command('syntax reset')
