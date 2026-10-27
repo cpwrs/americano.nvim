@@ -112,9 +112,9 @@ local function set_groups()
     Added           = { fg = palette.intense_green },
     Removed         = { fg = palette.intense_red },
     Changed         = { fg = palette.blue },
-    DiffAdd         = { bg = palette.intense_green, fg = palette.black },
-    DiffChange      = { bg = palette.blue, fg = palette.black },
-    DiffDelete      = { bg = palette.intense_red, fg = palette.black },
+    DiffAdd         = { bg = palette.diff_green, fg = palette.white },
+    DiffChange      = { bg = palette.diff_blue, fg = palette.white },
+    DiffDelete      = { bg = palette.diff_red, fg = palette.white },
     DiffText        = { bg = palette.grey2, fg = palette.white },
 
     -- Diagnostics
