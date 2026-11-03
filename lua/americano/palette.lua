@@ -15,9 +15,6 @@ local palette = {
   intense_magenta = "#aa93ff",
   intense_cyan = "#95fbfb",
   intense_white = "#ffffff",
-  diff_red = "#3e2420",
-  diff_blue = "#342f32",
-  diff_green = "#2f372b",
   pink = "#ffb1f5",
   orange = "#ffb699",
   offwhite = "#adabab",
@@ -27,5 +24,10 @@ local palette = {
   grey3 = "#665c55",
   grey2 = "#7a706a",
   grey1 = "#8c8480",
+  diff_red = "#3e2925",
+  diff_green = "#38372d",
+  diff_blue = "#342f31",
+  diff_orange = "#3e2e25",
 }
+
 return palette
