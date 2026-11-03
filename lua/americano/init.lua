@@ -24,8 +24,6 @@ local function set_terminal_colors()
   vim.g.terminal_color_15 = palette.intense_white
 end
 
-
-
 -- Apply group highlights
 local function set_groups()
   local groups = {
@@ -77,7 +75,7 @@ local function set_groups()
     MsgArea         = { link = "Normal" },
 
     -- Syntax
-    Comment         = vim.tbl_extend("force", { fg = palette.grey1 }, config.commentStyle),
+    Comment         = { fg = palette.grey1 },
     Constant        = { fg = palette.orange },
     String          = { fg = palette.green },
     Character       = { fg = palette.green },
@@ -133,6 +131,40 @@ local function set_groups()
     TelescopeBorder = { fg = palette.grey5, bg = palette.black },
     TelescopeNormal = { fg = palette.white, bg = palette.black },
   }
+
+  if config.minimal then
+    local minimal_groups = {
+      ModeMsg        = { fg = palette.white },
+      Comment        = { fg = palette.orange, bg = palette.diff_orange },
+      Constant       = { fg = palette.pink },
+      Number         = { fg = palette.pink },
+      Boolean        = { fg = palette.pink },
+      Float          = { fg = palette.pink },
+      Identifier     = { fg = palette.white },
+      Conditional    = { fg = palette.white },
+      Statement      = { fg = palette.white },
+      Repeat         = { fg = palette.white },
+      Label          = { fg = palette.white },
+      Operator       = { fg = palette.grey1 },
+      Keyword        = { fg = palette.white },
+      Exception      = { fg = palette.white },
+      PreProc        = { fg = palette.white },
+      PreCondit      = { fg = palette.white },
+      Include        = { fg = palette.white },
+      Define         = { fg = palette.white },
+      StorageClass   = { fg = palette.white },
+      Special        = { fg = palette.white },
+      Delimiter      = { fg = palette.grey1 },
+      Bold           = { fg = palette.white },
+      Italic         = { fg = palette.white },
+      Todo           = { fg = palette.orange, bg = palette.diff_orange },
+      SpecialComment = { fg = palette.orange, bg = palette.diff_orange },
+      SpecialChar    = { fg = palette.green },
+      DiffAdd        = { bg = palette.diff_green, fg = palette.green },
+      DiffDelete     = { bg = palette.diff_red, fg = palette.red },
+    }
+    groups = vim.tbl_extend('force', groups, minimal_groups)
+  end
 
   groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
 

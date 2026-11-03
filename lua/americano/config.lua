@@ -1,7 +1,7 @@
 local config = {
   defaults = {
     terminal = true,
-    commentStyle = { italic = true },
+    minimal = false,
     overrides = {},
   },
 }
